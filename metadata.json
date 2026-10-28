@@ -1,0 +1,5 @@
+{
+  "name": "Gentle Bloom Drift",
+  "description": "A portrait watercolor garden of blush flowers gently swaying in the breeze.",
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
