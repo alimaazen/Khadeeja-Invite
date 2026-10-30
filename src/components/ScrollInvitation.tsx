@@ -1,5 +1,5 @@
 import { MapPin, Navigation } from "lucide-react";
-import newBismillahImg from "@/assets/newBismillah.png";
+import wholeBismillahImg from "@/assets/wholeBismillahSection.png";
 import inshaAllahImg from "@/assets/inshaAllah-brownn.png";
 import ScrollSection from "./ScrollSection";
 import NikkahCard from "./NikkahCard";
@@ -14,7 +14,7 @@ const ScrollInvitation = ({ isEnvelopeOpened = true }: ScrollInvitationProps) =>
   return (
     <div className="relative font-bold">
       {/* 1ST PAGE - BISMILLAH CALLIGRAPHY & INVITATION */}
-      <ScrollSection isFirst={true}>
+      <ScrollSection isFirst={true} className="px-1.5 sm:px-3">
         <GlitterReveal
           pathVariant="diagonal"
           duration={3.0}
@@ -23,29 +23,12 @@ const ScrollInvitation = ({ isEnvelopeOpened = true }: ScrollInvitationProps) =>
           fadeDuration={1.8}
           revealThreshold={0.5}
         >
-          <div className="text-center max-w-lg px-3 mx-auto">
+          <div className="flex flex-col items-center justify-center w-full px-0 mx-auto">
             <img
-              src={newBismillahImg}
-              alt="Bismillah Calligraphy"
-              className="w-full max-w-[270px] min-[360px]:max-w-[310px] mx-auto h-auto drop-shadow-sm"
+              src={wholeBismillahImg}
+              alt="Bismillah and Invitation"
+              className="w-full max-w-[440px] scale-110 sm:scale-115 h-auto drop-shadow-sm origin-center"
             />
-            <p
-              className="mt-4 text-[#5C3A21] font-body text-[9px] min-[360px]:text-[10px] min-[400px]:text-[11px] sm:text-xs font-bold tracking-tight whitespace-nowrap"
-              style={{ fontWeight: 700 }}
-            >
-              In the name of Allah, the Most Gracious, the Most Merciful
-            </p>
-            <p
-              className="mt-5 text-[9.5px] min-[360px]:text-[10px] min-[390px]:text-[10.5px] sm:text-[11.5px] text-[#6B4E3D] font-body italic font-bold mx-auto leading-relaxed"
-              style={{ fontWeight: 700 }}
-            >
-              <span className="block whitespace-nowrap">
-                We cordially invite your esteemed presence on the
-              </span>
-              <span className="block whitespace-nowrap">
-                auspicious occasion of the nikkah ceremony of
-              </span>
-            </p>
           </div>
         </GlitterReveal>
       </ScrollSection>

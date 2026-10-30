@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { cn } from "@/lib/utils";
 
 interface ScrollSectionProps {
   children: React.ReactNode;
@@ -39,9 +40,11 @@ const ScrollSection = ({
     <section
       ref={ref}
       style={{ transitionDelay: `${delay}ms` }}
-      className={`min-h-[85vh] w-full flex flex-col items-center justify-center py-16 px-4 relative overflow-visible transition-all duration-1200 ease-out ${
-        isVisible ? "opacity-100 blur-0 scale-100 translate-y-0" : "opacity-0 translate-y-12"
-      } ${className}`}
+      className={cn(
+        "min-h-[85vh] w-full flex flex-col items-center justify-center py-16 px-4 relative overflow-visible transition-all duration-1200 ease-out",
+        isVisible ? "opacity-100 blur-0 scale-100 translate-y-0" : "opacity-0 translate-y-12",
+        className,
+      )}
     >
       {children}
     </section>
